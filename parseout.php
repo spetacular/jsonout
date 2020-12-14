@@ -59,7 +59,7 @@ class JSONOut
 
         foreach ($array1 as $key => &$value) {
             if (is_array($value) && is_array($array2[$key])) {
-                $value = $this->array_intersect_key_recursive($value, $array2[$key]);
+                $value = self::array_intersect_key_recursive($value, $array2[$key]);
             }
         }
         return $array1;
